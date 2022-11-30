@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.admin{
+    display: flex;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    background: url(../img/about-modern-01.webp) center / cover no-repeat;
+}
+
+.header p{
+    margin: 130px 0;
+    font-size: 40px;
+    color: #3D8361;
+    font-weight: 700;
+}
+
+.control__left{
+    height: 100vh;
+    background-color: #f2f5f1;
+    width: 25%;
+    padding: 60px 100px;
+}
+
+.control__left ul li{
+    list-style: none;
+    width: 100%;
+}
+
+.control__left ul li a{
+    text-decoration: none;
+    color: #3D8361;
+}
+
+.control__left>ul>li>a{
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: 600;
+}
+.control__left>ul>li{
+    margin-top: 20px;
+}
+
+.left__item{
+    margin: 7px 0 7px 15px;
+}
+
+.add__category--title{
+    margin: 20px 0;
+    font-size: 30px;
+    /* color: #3D8361; */
+}
+.control__right{
+    width: 100%;
+    padding: 60px 30px;
+}
+
+.add__category form input[type=text]{
+    padding: 12px 20px;
+    width: 70%;
+    outline: none;
+    font-size: 18px;
+}
+
+.add__category form input[type=submit]{
+    padding: 12px 20px;
+    background-color: #3D8361;
+    color: white;
+    border: none;
+    outline: none;
+    margin-left: 10px;
+}
+
+#addCate{
+    width: 90%;
+    padding: 15px 10px;
+}
+
+.list__category{
+    margin-top: 100px;
+}
+
+.list__category--title{
+    font-size: 30px;
+    color: #3D8361;
+}
+
+.list__category table{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.list__category table tr th,td{
+    border: 1px solid #3D8361;
+    padding: 10px;
+}
+
+.add__products .add__products--title{
+    color: #69955a;
+    font-size: 1.8rem;
+    line-height: 1;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 5px;
+    font-family: "Noto Serif",sans-serif;
+    margin: 30px;
+}
+
+.add__products form table {
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+.add__products form table tr td:nth-child(1){
+    text-align: center;
+}
+
+.add__products form input[type=text]{
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+
+#selcect_cate{
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+.add_product__sub{
+    padding: 12px 20px;
+    background-color: #3D8361;
+    color: white;
+    border: none;
+    outline: none;
+    margin: 20px 0;
+    float: right;
+}
+
+.add_product__sub:hover{
+    background-color: white;
+    color: #3D8361;
+    border: 1px solid #3D8361;
+}

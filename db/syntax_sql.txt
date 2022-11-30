@@ -1,0 +1,65 @@
+CREATE DATABASE kolly;
+use kolly;
+
+CREATE TABLE login_user(
+	id int auto_increment,
+    username varchar(100) ,
+    email varchar(150),
+    pass varchar(50),
+    PRIMARY KEY(id,username)
+);
+
+create table products(
+	id_pro int auto_increment,
+    name_tree varchar(100),
+    cost_current varchar(50),
+    cost_old varchar(50),
+    description_tree text,
+    img_main varchar(255),
+    img_sub1 varchar(255),
+    img_sub2 varchar(255),
+    img_sub3 varchar(255),
+    img_sub4 varchar(255),
+    primary key(id_pro)
+);
+
+create table orders(
+	id_order int auto_increment,
+    id_order_user int(255) ,
+    fullname varchar(100),
+    email varchar(100),
+    phone_number varchar(50),
+    address varchar(255),
+    note text,
+    date_order date,
+    amount int(20),
+    primary key(id_order)
+);
+
+create table orderdetails(
+	id_order int,
+    id_pro int,
+    quantity int DEFAULT 1,
+    price int,
+	primary key(id_order,id_pro)
+);
+
+create table carts(
+    id_cart int(11) auto_increment, 
+    id_order_user int ,
+    id_product int,
+    primary key(id_cart)
+);
+
+alter table  carts
+add constraint fk1 foreign key (id_order_user) references login_user(id);
+
+alter table  orders
+add constraint fk2 foreign key (id_order_user) references login_user(id);
+
+alter table orderdetails
+add constraint fk4 foreign key(id_pro) references products(id_pro);
+
+alter table orderdetails
+add constraint fk5 foreign key(id_order) references orders(id_order);
+
